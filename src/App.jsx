@@ -4,27 +4,19 @@ import ToDo from "./ToDo";
 
 function App() {
   const todos = [
-    { task: "Iemācīties React", completed: false },
-    { task: "Iemācīties Laravel", completed: true },
-    { task: "Nopirkt pienu", completed: false },
+    { id: 1, task: "Iemācīties React", completed: false },
+    { id: 2, task: "Iemācīties Laravel", completed: true },
+    { id: 3, task: "Nopirkt pienu", completed: false },
   ];
 
   return (
     <>
-   <ToDo 
-  task={todos[0].task}
-  completed={todos[0].completed} 
-/>
-<ToDo 
-  task={todos[0].task}
-  completed={todos[0].completed} 
-/>
-<ToDo 
-  task={todos[0].task}
-  completed={todos[0].completed} 
-/>
-
-</>
+      <h1>Veicamie uzdevumi</h1>
+  
+      {todos.map((todo) => {
+        return <ToDo key={todo.id} {...todo} />
+      })}
+    </>
   );
 }
    
