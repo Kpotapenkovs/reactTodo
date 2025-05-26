@@ -3,6 +3,7 @@ import { useState } from "react";
 
 function ToDo({ task, completed }) {
   
+  
   const [check, setCheck] = useState(completed);
 
   return (
