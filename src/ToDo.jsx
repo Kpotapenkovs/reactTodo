@@ -11,6 +11,7 @@ function ToDo({ task, completed }) {
     <label>
 
       <input type="checkbox" checked={check} onChange={() => setCheck(!check)} />
+      {task} |
 
     </label>
 

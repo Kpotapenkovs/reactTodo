@@ -1,17 +1,17 @@
-import { useState } from "react";
 
 
-function Diary({ task, completed }) {
+
+function Diary({id, title, body, date }) {
   
-  const [check, setCheck] = useState(completed);
 
   return (
+    
+      <div>
 
-    <label>
+  {id} | {title} | {body} | {date}
 
-    <input type="checkbox" checked={check} onChange={() => setCheck(!check)} />
-
-  </label>
+      </div>
+    
 
   );
   
