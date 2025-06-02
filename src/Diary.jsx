@@ -1,18 +1,20 @@
 
 
 
-function Diary({id, title, body, date }) {
+function Diary({id, title, body, date, onDelete }) {
   
 
   return (
-    
+    <article>
+      <label>
       <div>
 
-  {id} | {title} | {body} | {date}
+  {title} | {body} | {date}
 
       </div>
-    
-
+    </label>
+    <button onClick={() => onDelete(id)}>❌</button>
+    </article>
   );
   
 }
